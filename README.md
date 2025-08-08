@@ -21,7 +21,7 @@ RESPUESTA: Se creó la API y se tiene la opción agregar usuario en el front end
 
 ************************************************************************** 
 No debe ser posible registrar un correo electrónico ya existente.
-RESPUESTA: Se ha creado dos CRUD una usando un archivo json como BD y otra con conexión a un SQL Server, en la de SQL Server es fácil controlar colocando la propiedad unique en la columna correo, pero a nivel json no controlé que busque el correo si ya existe.
+RESPUESTA: Se ha creado dos CRUD una usando un archivo json como BD y otra con conexión a un SQL Server, en la de SQL Server es fácil controlar colocando la propiedad unique en la columna correo, pero a nivel json no controlé que busque el correo si ya existe, pero en el loggueo se hace eso, ya que valida si existe el correo para poder ingresar.
 
 ************************************************************************** 
 Debe ser posible eliminar usuarios.
