@@ -1,0 +1,30 @@
+GET http://localhost:9000/api/jusers HTTP/1.1
+
+###
+GET http://localhost:9000/api/jusers/2 HTTP/1.1
+
+###
+POST http://localhost:9000/api/jusers HTTP/1.1
+Content-Type: application/json
+
+{
+    "correo": "fabian@nursrl.com",
+    "clave": "12345", 
+    "nombre": "Fabian Peña", 
+    "estado": "A"
+}
+
+
+###
+PUT http://localhost:9000/api/jusers/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "correo": "leonardo@nursrl.com",
+    "nombre": "Leonardo Peña", 
+    "clave": "12345" 
+}
+
+
+###
+DELETE  http://localhost:9000/api/jusers/3 HTTP/1.1

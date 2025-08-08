@@ -1,0 +1,18 @@
+{
+  "jusers": [
+    {
+      "id": 1,
+      "correo": "admin@spsgroup.com.br",
+      "clave": "1234",
+      "nombre": "ADMIN",
+      "estado": "A"
+    },
+    {
+      "id": 2,
+      "correo": "julio_lider@hotmail.com",
+      "clave": "1234",
+      "nombre": "Julio Lider Peña",
+      "estado": "A"
+    }
+  ]
+}

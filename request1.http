@@ -1,0 +1,30 @@
+GET http://localhost:9000/api/usuarios HTTP/1.1
+
+###
+GET http://localhost:9000/api/usuarios/1 HTTP/1.1
+
+###
+POST http://localhost:9000/api/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "correo": "yngrit@nursrl.com",
+    "clave": "XXXXX",
+    "nombre": "Yngrit Osinaga", 
+    "estado": "A"
+}
+
+###
+PUT http://localhost:9000/api/usuarios/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "correo": "leonardo@nursrl.com",
+    "clave": "XXXXX",
+    "nombre": "Leonardo", 
+    "estado": "A"
+}
+
+
+###
+DELETE  http://localhost:9000/api/usuarios/2 HTTP/1.1

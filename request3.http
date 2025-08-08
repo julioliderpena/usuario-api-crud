@@ -1,0 +1,27 @@
+GET http://localhost:9000/api/books HTTP/1.1
+
+###
+GET http://localhost:9000/api/books/1 HTTP/1.1
+
+###
+POST http://localhost:9000/api/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Una breve historia XXX",
+    "author": "Lider", 
+    "year": 2020
+}
+
+###
+PUT http://localhost:9000/api/books/4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Una breve historia YYY!",
+    "year": 2025
+}
+
+
+###
+DELETE  http://localhost:9000/api/books/4 HTTP/1.1
