@@ -1,27 +1,36 @@
 GET http://localhost:9000/api/books HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU0OTE5NjE5LCJleHAiOjE3NTQ5MjE0MTl9.Z6a9rLh41UWOILn_4BKTlsfvCsg-_kig2e9elovTBnU
+
 
 ###
 GET http://localhost:9000/api/books/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU0OTE5NjE5LCJleHAiOjE3NTQ5MjE0MTl9.Z6a9rLh41UWOILn_4BKTlsfvCsg-_kig2e9elovTBnU
+
 
 ###
 POST http://localhost:9000/api/books HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU0OTE5NjE5LCJleHAiOjE3NTQ5MjE0MTl9.Z6a9rLh41UWOILn_4BKTlsfvCsg-_kig2e9elovTBnU
 Content-Type: application/json
 
 {
-    "title": "Una breve historia XXX",
+    "title": "Mi planta de Naranja",
     "author": "Lider", 
     "year": 2020
 }
 
+
 ###
 PUT http://localhost:9000/api/books/4 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU0OTE5NjE5LCJleHAiOjE3NTQ5MjE0MTl9.Z6a9rLh41UWOILn_4BKTlsfvCsg-_kig2e9elovTBnU
 Content-Type: application/json
 
 {
-    "title": "Una breve historia YYY!",
-    "year": 2025
+    "title": "Mi planta de Naranja Lima",
+    "author": "Antonio de Vasconcelo", 
+    "year": 1990
 }
 
 
 ###
 DELETE  http://localhost:9000/api/books/4 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU0OTE5NjE5LCJleHAiOjE3NTQ5MjE0MTl9.Z6a9rLh41UWOILn_4BKTlsfvCsg-_kig2e9elovTBnU

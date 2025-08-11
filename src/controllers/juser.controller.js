@@ -22,9 +22,6 @@ export const getJuserById = (req, res) => {
 };
 
 
-
-
-
 export const createJuser = (req, res) => {
   console.log('entró a post de jusers!');
   const data = readData(DB_FILE);

@@ -1,0 +1,18 @@
+###
+POST http://localhost:9000/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "correo": "admin@spsgroup.com.br",
+  "clave": "1234"
+}
+
+
+###
+POST http://localhost:9000/api/auth/gettoken HTTP/1.1
+Content-Type: application/json
+
+{
+  "tipo": "admin",
+  "correo": "admin@spsgroup.com.br"
+}

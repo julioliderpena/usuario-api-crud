@@ -8,7 +8,7 @@ export const getUsuarios = async (req, res) => {
 
   try {
     // Por buenas prácticas de visualización y mantenimiento me gusta separar el query 
-    const querySel1 = `SELECT id, correo, clave, nombre, estado `;
+    const querySel1 = `SELECT id, correo, clave, nombre, tipo, estado `;
     const querySel2 = `FROM   DBO.USUARIO`;
     // 🔄 Concatenar los queries en uno sólo
     const query = `${querySel1} ${querySel2}`;
@@ -29,7 +29,7 @@ export const getUsuarioById = async (req, res) => {
     const id = req.params.id;
     console.log(`usuario Id = ${id}`);
     // Por buenas prácticas de visualización y mantenimiento me gusta separar el query
-    const querySel1 = `SELECT id, correo, clave, nombre, estado `;
+    const querySel1 = `SELECT id, correo, clave, nombre, tipo, estado `;
     const querySel2 = `FROM   DBO.USUARIO `;
     const querySel3 = `WHERE  id = ${id} `;
     // 🔄 Concatenar los queries en uno sólo
@@ -54,12 +54,13 @@ export const createUsuario = async (req, res) => {
   //const clave = await bcrypt.hash(req.body.clave, 10);
   const clave = req.body.clave;
   const nombre = req.body.nombre;
+  const tipo = req.body.tipo;
   const estado = req.body.estado;
 
   // Por buenas prácticas de visualización y mantenimiento me gusta separar el query
   const queryIns1 = "INSERT INTO DBO.USUARIO ";
-  const queryIns2 = "       (correo, clave, nombre, estado) ";
-  const queryIns3 = "VALUES (@correo, @clave, @nombre, @estado); ";
+  const queryIns2 = "       (correo, clave, nombre, tipo, estado) ";
+  const queryIns3 = "VALUES (@correo, @clave, @nombre, @tipo, @estado); ";
   const querySel1 = "SELECT SCOPE_IDENTITY() AS id;";
   // 🔄 Concatenar los queries en uno sólo
   const query = `${queryIns1} ${queryIns2} ${queryIns3}; ${querySel1}`;
@@ -71,6 +72,7 @@ export const createUsuario = async (req, res) => {
       .input('correo', sql.VarChar, correo)
       .input('clave', sql.VarChar, clave)
       .input('nombre', sql.VarChar, nombre)
+      .input('tipo', sql.Char, tipo)
       .input('estado', sql.Char, estado)
       .query(query);
 
@@ -95,6 +97,7 @@ export const updateUsuario = async (req, res) => {
   //const clave = await bcrypt.hash(req.body.clave, 10)
   const clave = req.body.clave;
   const nombre = req.body.nombre;
+  const tipo = req.body.tipo;
   const estado = req.body.estado;
 
   try {
@@ -103,7 +106,7 @@ export const updateUsuario = async (req, res) => {
     // Por buenas prácticas de visualización y mantenimiento me gusta separar el query
     const queryUpd1 = `UPDATE DBO.USUARIO `;
     const queryUpd2 = `SET    correo = @correo, clave = @clave, `;
-    const queryUpd3 = "       nombre = @nombre, estado = @estado ";
+    const queryUpd3 = "       nombre = @nombre, tipo = @tipo, estado = @estado ";
     const queryUpd4 = `WHERE  id = ${id} `;
     // 🔄 Concatenar los queries en uno sólo
     const query = `${queryUpd1} ${queryUpd2} ${queryUpd3} ${queryUpd4}`;
@@ -114,6 +117,7 @@ export const updateUsuario = async (req, res) => {
       .input("correo", sql.VarChar, correo)
       .input("clave", sql.VarChar, clave)
       .input("nombre", sql.VarChar, nombre)
+      .input('tipo', sql.Char, tipo)
       .input("estado", sql.VarChar, estado)
       .query(query)
     
