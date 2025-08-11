@@ -35,3 +35,10 @@ RESPUESTA: Se creó la API y se tiene la opción agregar usuario en el front end
 ************************************************************************** 
 NOTA: EL PROYECTO ESTÁ CONFIGURADO PARA QUE CORRA EN EL PUERTO 9000.
 
+************************************************************************** 
+************************************************************************** 
+2025-08-11
+Se acaban de agregar las validaciones de token, como explicamos en la versión 1, se crea una cookie en el front cuando se loggea el usuario, entonces en esta versión el back end está validando si la cookie está creada para traer o validar la sesión del usuario y con ello verificar que el usuario es válido y procesar las APIS.
+También se dejó comentada el caso que se quisiera que el back end genere el token para que este lo pueda requerir y enviarlo en la cabecera (Authorization: Bearer) de los métodos get, post, put y delete
+************************************************************************** 
+************************************************************************** 
